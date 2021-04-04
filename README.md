@@ -1,6 +1,6 @@
 # TextToSpeech
 
-Step 1 : Download freeTTS - Click here
+Step 1 : Download freeTTS - (https://sourceforge.net/projects/freetts/files/)
 
 Step 2 : Unzip the freeTTS binary package and check inside the \lib directory for jsapi.exe.
 
