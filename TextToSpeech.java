@@ -5,6 +5,8 @@ import javax.speech.synthesis.SynthesizerModeDesc;
 
 public class TextToSpeech {
 	
+	private static String text;
+	
 	public static void main(String[] args) {
 		
 		try {
@@ -14,7 +16,8 @@ public class TextToSpeech {
 			Synthesizer synthesizer = Central.createSynthesizer(new SynthesizerModeDesc(Locale.US));
 			synthesizer.allocate();
 			synthesizer.resume();
-			synthesizer.speakPlainText("Hello World!", null);
+			text = JOptionPane.showInputDialog("Input your text");
+			synthesizer.speakPlainText(text, null);
 			synthesizer.waitEngineState(Synthesizer.QUEUE_EMPTY);
 			synthesizer.deallocate();
 			
